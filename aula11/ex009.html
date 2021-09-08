@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+
+<body>
+    <h1>Nacionalidade</h1>
+
+    <form onsubmit="return verificar(event)" action="">
+        
+            Em qual país reside no momento: <input type="text" name="País" id="País">
+            <input id="País" type="submit" value="Verificar">
+      
+
+
+    </form>
+
+    <div id="res">
+
+    </div>
+
+    <script>
+        function verificar(e) {
+            e.preventDefault();
+            var txtp = window.document.getElementById('País')
+            var res = window.document.getElementById('res')
+            var país = txtp.value
+
+
+            if (país != 'Brasil') {
+                res.innerHTML = '<p> Você é um Estrangeiro.</p>'
+            }
+            else {
+                res.innerHTML = '<p> Você é Brasileiro</p>'
+            }
+            return false;
+        }
+
+       
+    </script>
+
+</body>
+
+</html>
